@@ -30,7 +30,7 @@ export default async function handler(req, res) {
     // Email send configuration
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
-      to: process.env.EMAIL_USER,
+      to: process.env.SMTP_USER,
       subject: `Portfolio Contact: ${subject}`,
       text: `You have received a new message from your portfolio contact form.\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`,
       html: `
