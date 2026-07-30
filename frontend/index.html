@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Khadija Kamal - Software Engineering Student at SSUET (3.6+ GPA). Portfolio featuring Full-Stack Web Applications, Systems Programming, and Operating Systems Simulators."
+    />
+    <title>Khadija Kamal | Software Engineering Portfolio</title>
+
+    <!-- Google Fonts Imports: Syne, Plus Jakarta Sans, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome 6 Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Modular CSS System -->
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <!-- Hardware-Accelerated Custom Cursor Markers -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- Glassmorphic Navigation Engine -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+      <div class="container">
+        <a class="navbar-brand font-heading magnetic-target" href="#hero">
+          <span class="brand-gradient">KhadijaKamal</span>
+        </a>
+
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars text-light"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link px-3 magnetic-target" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 magnetic-target" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 magnetic-target" href="#projects"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 magnetic-target" href="#game"
+                >Mini-Game</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3 magnetic-target" href="#contact"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <button
+                id="theme-toggle"
+                class="btn btn-glass btn-icon magnetic-target"
+                aria-label="Toggle Theme"
+              >
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Canvas Interactive Layer -->
+    <section
+      id="hero"
+      class="hero-section position-relative overflow-hidden d-flex align-items-center min-vh-100"
+    >
+      <canvas id="hero-canvas" class="hero-bg-canvas"></canvas>
+
+      <div class="container position-relative z-2 py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-9 mx-auto text-center">
+            <span
+              class="tech-badge badge badge-glow mb-3 terminal-badge animate-float"
+            >
+              System Architecture & Full-Stack Engineer
+            </span>
+            <h1 class="display-3 font-heading fw-bold mb-3">
+              Building Scalable Systems &
+              <span class="brand-gradient">Intelligent Applications</span>
+            </h1>
+            <p class="lead text-muted mb-4 max-w-700 mx-auto">
+              6th Semester Software Engineering Student at Sir Syed University
+              of Engineering and Technology (SSUET) with a 3.6+ GPA. Specialized
+              in full-stack architectures, OS scheduling simulators, and
+              performance systems.
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="#projects" class="btn btn-glow magnetic-target">
+                <span>View Projects</span>
+                <i class="fas fa-arrow-right ms-2"></i>
+              </a>
+              <a href="#contact" class="btn btn-glass magnetic-target">
+                <span>Get In Touch</span>
+                <i class="fas fa-paper-plane ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Bouncing Indicator -->
+      <a
+        href="#about"
+        class="scroll-indicator magnetic-target"
+        aria-label="Scroll to About Section"
+      >
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- About & Education Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-title text-center mb-2">
+          <h2 id="about-title" class="reveal-zoom font-heading">
+            About <span class="brand-gradient">Me</span>
+          </h2>
+        </div>
+        <p class="section-subtitle reveal-zoom">
+          Academic background, professional certifications, and system design
+          vision
+        </p>
+
+        <!-- Static fallback grid + dynamic js hook wrapper -->
+        <div id="about-cards-container" class="about-grid">
+          <!-- Card 1: Academic Background -->
+          <div class="glass-card h-100 reveal-card">
+            <div class="d-flex align-items-center mb-3">
+              <div class="icon-box me-3">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div>
+                <h3 class="h5 mb-0">Academic Background</h3>
+                <small class="text-muted"
+                  >Sir Syed University of Engineering and Technology
+                  (SSUET)</small
+                >
+              </div>
+            </div>
+            <p class="text-muted mb-2">
+              BS Software Engineering (Currently 6th Semester)
+            </p>
+            <div class="d-flex align-items-center">
+              <span class="badge badge-yellow me-2">GPA: 3.6+</span>
+              <span class="text-muted small"
+                >Consistently in High Academic Standing</span
+              >
+            </div>
+          </div>
+
+          <!-- Card 2: Professional Certifications -->
+          <div class="glass-card h-100 reveal-card">
+            <div class="d-flex align-items-center mb-3">
+              <div class="icon-box me-3">
+                <i class="fas fa-award"></i>
+              </div>
+              <div>
+                <h3 class="h5 mb-0">Certifications</h3>
+                <small class="text-muted"
+                  >UBIT Data Science & Modern Computing</small
+                >
+              </div>
+            </div>
+            <p class="text-muted mb-0">
+              Specialized technical certification focused on advanced computing
+              concepts, data analysis, and modern software design standards.
+            </p>
+          </div>
+
+          <!-- Card 3: Technical Scope -->
+          <div class="glass-card h-100 reveal-card">
+            <div class="d-flex align-items-center mb-3">
+              <div class="icon-box me-3">
+                <i class="fas fa-microchip"></i>
+              </div>
+              <div>
+                <h3 class="h5 mb-0">Technical Scope</h3>
+                <small class="text-muted">Core Focus Areas</small>
+              </div>
+            </div>
+            <p class="text-muted mb-0">
+              Proficient in low-level systems programming, operating system
+              kernels, OS schedulers, and modern scalable web architectures.
+            </p>
+          </div>
+
+          <!-- Card 4: Engineering Objectives -->
+          <div class="glass-card h-100 reveal-card">
+            <div class="d-flex align-items-center mb-3">
+              <div class="icon-box me-3">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <div>
+                <h3 class="h5 mb-0">Engineering Objectives</h3>
+                <small class="text-muted">Career & System Vision</small>
+              </div>
+            </div>
+            <p class="text-muted mb-0">
+              Dedicated to designing high-throughput distributed applications,
+              clean API protocols, and fault-tolerant software infrastructure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Stack / Skills Matrix Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-title text-center mb-2">
+          <h2 id="skills-title" class="reveal-zoom font-heading">
+            Technical <span class="brand-gradient">Stack</span>
+          </h2>
+        </div>
+        <p class="section-subtitle reveal-zoom">
+          Core competencies, engineering tools, frameworks, and programming
+          languages
+        </p>
+
+        <!-- Dynamic Container Hooked via app.js -->
+        <div id="skills-container" class="skills-grid reveal-zoom">
+          <!-- Dynamically populated from portfolioData via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-title text-center mb-2">
+          <h2 id="projects-title" class="reveal-zoom font-heading">
+            Featured <span class="brand-gradient">Projects</span>
+          </h2>
+        </div>
+        <p class="section-subtitle reveal-zoom">
+          Explore my recent full-stack applications, OS simulators, and system
+          tools
+        </p>
+
+        <!-- Filter Buttons Bar -->
+        <div
+          class="filter-container d-flex justify-content-center gap-2 flex-wrap mb-5 reveal-zoom"
+        >
+          <button
+            class="btn btn-glass filter-btn active magnetic-target"
+            data-filter="all"
+          >
+            All
+          </button>
+          <button
+            class="btn btn-glass filter-btn magnetic-target"
+            data-filter="fullstack"
+          >
+            Full-Stack
+          </button>
+          <button
+            class="btn btn-glass filter-btn magnetic-target"
+            data-filter="systems"
+          >
+            Systems / OS
+          </button>
+          <button
+            class="btn btn-glass filter-btn magnetic-target"
+            data-filter="web"
+          >
+            Web Apps
+          </button>
+        </div>
+
+        <!-- Dynamic Projects Matrix Container (2x2 Display) -->
+        <div id="projects-grid" class="projects-2x2-grid reveal-zoom">
+          <!-- Dynamically populated from portfolioData via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details Glass Modal -->
+    <div
+      class="modal fade"
+      id="project-modal"
+      tabindex="-1"
+      aria-labelledby="project-modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content glass-card border-0 p-4">
+          <div class="modal-header border-bottom-glass pb-3">
+            <h4
+              class="modal-title font-heading text-gradient"
+              id="project-modal-title"
+            >
+              Project Details
+            </h4>
+            <button
+              type="button"
+              class="btn-close btn-close-white magnetic-target"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body pt-4" id="project-modal-body">
+            <!-- Dynamically populated via app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mini-Game Cyber Section -->
+    <section id="game" class="section">
+      <div class="container">
+        <div class="section-title text-center mb-2">
+          <h2 id="game-title" class="reveal-zoom font-heading">
+            Cyber Defense <span class="brand-gradient">Mini-Game</span>
+          </h2>
+        </div>
+        <p class="section-subtitle reveal-zoom">
+          Interactive Easter Egg: Collect cyan data nodes and avoid red
+          corruption!
+        </p>
+
+        <div class="game-container game-wrapper reveal-zoom">
+          <!-- HUD Monospace Overlay Banner -->
+          <div
+            id="game-hud"
+            class="game-hud d-flex justify-content-between align-items-center flex-wrap gap-3"
+          >
+            <div class="d-flex align-items-center gap-4 flex-wrap">
+              <div>
+                Score:
+                <strong id="game-score" class="text-yellow font-code">0</strong>
+              </div>
+              <div>
+                High Score:
+                <strong id="game-highscore" class="text-cyan font-code"
+                  >0</strong
+                >
+              </div>
+              <div>
+                Core Health:
+                <strong id="game-health" class="text-danger font-code"
+                  >100%</strong
+                >
+              </div>
+            </div>
+            <button
+              id="start-game-btn"
+              class="btn btn-glow btn-sm magnetic-target"
+            >
+              Start Cyber Game
+            </button>
+          </div>
+
+          <!-- Game Canvas Frame -->
+          <div class="position-relative w-100">
+            <canvas id="game-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-title text-center mb-2">
+          <h2 id="contact-title" class="reveal-zoom font-heading">
+            Get In <span class="brand-gradient">Touch</span>
+          </h2>
+        </div>
+        <p class="section-subtitle reveal-zoom">
+          Have a query, system proposal, or project idea? Send a message
+          directly.
+        </p>
+
+        <div class="contact-wrapper reveal-zoom">
+          <!-- Contact Info Glass Panel -->
+          <div class="glass-card d-flex flex-column justify-content-between">
+            <div>
+              <h3 class="h4 font-heading mb-3">Contact Details</h3>
+              <p class="text-muted mb-4">
+                I am open to full-stack engineering, systems development, and
+                collaborative software projects.
+              </p>
+
+              <div class="d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="icon-box m-0">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <small class="text-muted d-block">Email</small>
+                    <span class="font-code text-secondary"
+                      >khadijakamal6002@gmail.com</span
+                    >
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                  <div class="icon-box m-0">
+                    <i class="fas fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <small class="text-muted d-block">Location</small>
+                    <span class="text-secondary">Karachi, Pakistan</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-4 border-top-glass">
+              <span class="text-muted small d-block mb-2"
+                >Connect via Socials</span
+              >
+              <div class="d-flex gap-2">
+                <a
+                  href="https://github.com/KHADIJAKAMAL123"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-glass btn-icon magnetic-target"
+                  aria-label="GitHub Profile"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="www.linkedin.com/in/khadija-kamal-264346283"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-glass btn-icon magnetic-target"
+                  aria-label="LinkedIn Profile"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form (Mapped to POST /api/contact API) -->
+          <div class="glass-card">
+            <form id="contact-form" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="contact-name" class="form-label text-muted small"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control glass-input"
+                    id="contact-name"
+                    placeholder="John Doe"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="contact-email" class="form-label text-muted small"
+                    >Your Email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control glass-input"
+                    id="contact-email"
+                    placeholder="john@example.com"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label
+                    for="contact-subject"
+                    class="form-label text-muted small"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control glass-input"
+                    id="contact-subject"
+                    placeholder="Project Inquiry / Collaboration"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label
+                    for="contact-message"
+                    class="form-label text-muted small"
+                    >Message</label
+                  >
+                  <textarea
+                    class="form-control glass-input"
+                    id="contact-message"
+                    rows="4"
+                    placeholder="Write your message here..."
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-12 text-center mt-4">
+                  <button
+                    type="submit"
+                    id="contact-submit-btn"
+                    class="btn btn-glow w-100 magnetic-target py-3"
+                  >
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane ms-2"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+            <!-- Form Status Box -->
+            <div
+              id="contact-status"
+              class="mt-3 text-center"
+              style="display: none"
+            ></div>
+            <div id="contact-response" style="display: none"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top-glass text-center">
+      <div class="container">
+        <p class="text-muted small mb-0">
+          &copy; 2026 Khadija Kamal. Built with Vanilla JavaScript, Canvas API &
+          Express.js.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Portfolio Modular Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/background-game.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
